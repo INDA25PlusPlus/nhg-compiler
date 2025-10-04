@@ -50,8 +50,8 @@ The adventure ends.
 ```
 The count stands before the limit.
 A count stands before limit.
-count stands before the limit.
-```
+count stands before the limit.```
+
 ### Special Cases
 Special cases:
 - `nothing` is a literal 0.
