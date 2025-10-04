@@ -45,12 +45,12 @@ The adventure ends.
 
 ## Expression 
 ### Syntax
-```
 *the*, *a*, and *an* are optional “article” tokens before any variable or noun phrase. All of these are equivalent:
 ```
 The count stands before the limit.
 A count stands before limit.
-count stands before the limit.```
+count stands before the limit.
+```
 
 ### Special Cases
 Special cases:
