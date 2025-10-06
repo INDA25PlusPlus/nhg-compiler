@@ -1,0 +1,112 @@
+<program> ::= <story_start> <statements> <story_end>
+
+# --- STORY STRUCTURE ----------------------------------------------------------
+<story_start> ::= "The adventure begins."
+<story_end>   ::= "The adventure ends."
+
+<statements> ::= <statement> <statements>
+               | <statement>
+
+<statement> ::= <narrative_statement>
+              | <control_statement>
+
+# --- CONTROL STATEMENTS -------------------------------------------------------
+<control_statement> ::= ">" "enter" <identifier> "while" <condition>
+                      | ">" "leave" <identifier>
+                      | ">" "inspect" "whether" <condition>
+                      | ">" "say" <string>
+                      | ">" "ask" <identifier>
+
+# --- NARRATIVE STATEMENTS -----------------------------------------------------
+<narrative_statement> ::= <assignment_sentence>
+                        | <print_sentence>
+                        | <input_sentence>
+                        | <list_sentence>
+                        | <difference_sentence>
+                        | <multiply_sentence>
+                        | <divide_sentence>
+                        | <remainder_sentence>
+                        | <boolean_sentence>
+
+# --- CORE SENTENCES -----------------------------------------------------------
+<assignment_sentence> ::= "The" <identifier> "transforms" "into" <expression> "."
+
+<print_sentence> ::= "You" "speak" "of" <expression> "."
+
+<input_sentence> ::= "You" "seek" "wisdom" "from" "beyond" "and" "call" "it" <identifier> "."
+
+<list_sentence> ::= "You" "reflect" "on" "all" "you" "have" "learned" ":" <expression_list> "."
+<difference_sentence> ::= "You" "recall" "the" "distance" "between" <expression> "and" <expression> "."
+<multiply_sentence> ::= "You" "envision" <expression> "by" <expression> "."
+<divide_sentence> ::= "You" "divide" <expression> "among" <expression> "."
+<remainder_sentence> ::= "You" "keep" "what" "remains" "of" <expression> "after" "sharing" "with" <expression> "."
+
+<boolean_sentence> ::= "You" "ponder" "whether" <condition> "still" "holds" "."
+                     | "The" "story" "continues" "as" "long" "as" <condition> "remains" "true" "."
+
+# --- EXPRESSIONS --------------------------------------------------------------
+<expression_list> ::= <expression>
+                    | <expression> "and" <expression_list>
+                    | <expression> "," <expression_list>
+
+<expression> ::= <term>
+               | <add_expr>
+               | <sub_expr>
+               | <mul_expr>
+               | <div_expr>
+               | <mod_expr>
+
+<add_expr> ::= "You" "reflect" "on" "all" "you" "have" "learned" ":" <expression> "and" <expression>
+<sub_expr> ::= "You" "recall" "the" "distance" "between" <expression> "and" <expression>
+<mul_expr> ::= "You" "envision" <expression> "by" <expression>
+<div_expr> ::= "You" "divide" <expression> "among" <expression>
+<mod_expr> ::= "You" "keep" "what" "remains" "of" <expression> "after" "sharing" "with" <expression>
+
+<term> ::= <number>
+         | <identifier>
+         | <literal_value>
+
+<literal_value> ::= "nothing"
+                  | "all"
+                  | "universe"
+                  | "everything"
+
+# --- CONDITIONS ---------------------------------------------------------------
+<condition> ::= <comparison>
+              | <condition> <logical_connector> <condition>
+
+<comparison> ::= <expression> "is" "much" "like" <expression>       # ==
+               | <expression> "differs" "from" <expression>         # !=
+               | <expression> "stands" "before" <expression>        # <
+               | <expression> "towers" "above" <expression>         # >
+               | <expression> "stands" "no" "further" "than" <expression>  # <=
+               | <expression> "stands" "not" "below" <expression>          # >=
+               | <expression> "is" "not" <expression>                      # logical not (i.e. negation)
+
+<logical_connector> ::= "as" "well" "as"    # AND
+                      | "or" "perhaps"      # OR
+
+# --- TOKENS -------------------------------------------------------------------
+<identifier> ::= <word>
+<word> ::= <letter>
+          | <letter> <word>
+
+<number> ::= <digit>
+            | <digit> <number>
+
+<digit> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+
+<letter> ::= "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j"
+           | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t"
+           | "u" | "v" | "w" | "x" | "y" | "z"
+           | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J"
+           | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T"
+           | "U" | "V" | "W" | "X" | "Y" | "Z"
+           | "_"
+
+<string> ::= "\"" <string_content> "\""
+<string_content> ::= <string_char> <string_content>
+                   | <string_char>
+<string_char> ::= any printable non-quote character
+
+# --- END OF GRAMMAR -----------------------------------------------------------
