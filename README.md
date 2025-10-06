@@ -1,7 +1,7 @@
 ![dephfae-a49d5d4b-fb1e-45ae-b132-e45f00f81880-2931323715](https://github.com/user-attachments/assets/e0826ac2-e168-4063-bc23-e6500ce4cd9a)
 Art by [camilaxiao](https://www.deviantart.com/camilaxiao/art/Pixel-art-dungeon-animation-889329830)
 
-# Dungeon Language (WIP)
+# Adventlang ⚔️
 Inspired by languages like [Chef](https://www.dangermouse.net/esoteric/chef.html) and [Shakespeare](https://en.wikipedia.org/wiki/Shakespeare_Programming_Language), where programs look like literature, with the theme of 80s text-based adventure games like [Zork](https://en.wikipedia.org/wiki/Zork).
 
 Source is mostly flowing text (narration) plus explicit control lines starting with `>`.
