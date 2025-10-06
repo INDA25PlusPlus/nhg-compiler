@@ -25,27 +25,28 @@ The adventure ends.
 ```
 
 ## Control Flow
-| Syntax                              | Meaning                               |
-| ----------------------------------- | ------------------------------------- |
-| `> enter <place> while <condition>` | Begin while-loop                      |
-| `> leave <place>`                   | End while-loop                        |
-| `> inspect whether <condition>`     | If-statement                          |
-| `> say <phrase>`                    | Print                                 |
-| `> ask <thing>`                     | Input                                 |
+| Syntax                              | Meaning          | Python Equivalent    |
+| ----------------------------------- | ---------------- | -------------------- |
+| `> enter <place> while <condition>` | Begin while-loop | `while <condition>:` |
+| `> leave <place>`                   | End block   | (dedent / end block) |
+| `> inspect whether <condition>`     | If-statement     | `if <condition>:`    |
+| `> say <phrase>`                    | Print            | `print(<phrase>)`    |
+| `> ask <thing>`                     | Input            | `<thing> = input()`  |
+
 
 ## Computation Phrasing
-| Narrative pattern                                     | Meaning                                      |
-| ----------------------------------------------------- | -------------------------------------------- |
-| `You reflect on all you have learned: <exprlist>`     | Summation or recursive combination of values |
-| `The <x> transforms into <y>.`                        | Assignment (`x = y`)                         |
-| `You speak of <expr>.`                                | Print statement                              |
-| `You seek wisdom from beyond and call it <x>.`        | Input into variable                          |
-| `You ponder whether <expr> still holds.`              | Boolean test, used in loops/conditions       |
-| `The story continues as long as <expr> remains true.` | Loop condition variant                       |
+| Narrative pattern                                     | Meaning                | Python Equivalent                    |
+| ----------------------------------------------------- | ---------------------- | ------------------------------------ |
+| `You reflect on all you have learned: <exprlist>`     | Sum or combine values  | `sum([<exprlist>])` or `a + b + ...` |
+| `The <x> transforms into <y>.`                        | Assignment             | `<x> = <y>`                          |
+| `You speak of <expr>.`                                | Print statement        | `print(<expr>)`                      |
+| `You seek wisdom from beyond and call it <x>.`        | Input into variable    | `<x> = input()`                      |
+| `You ponder whether <expr> still holds.`              | Boolean test           | `if <expr>:`   |
+| `The story continues as long as <expr> remains true.` | Loop condition variant | `while <expr>:`                      |
+
 
 ## Expression 
 ### Syntax
-```
 *the*, *a*, and *an* are optional “article” tokens before any variable or noun phrase. All of these are equivalent:
 ```
 The count stands before the limit.
