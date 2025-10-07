@@ -2,6 +2,7 @@
 Source/Help for this file:
 https://www.rickyspears.com/technology/building-your-own-programming-language-from-scratch-a-deep-dive/ 
 """
+
 import re
 from collections import namedtuple
 
@@ -25,7 +26,7 @@ TOKEN_SPEC = [
     ("GT", r"towers above"),
     ("LE", r"stands no further than"),
     ("GE", r"stands not below"),
-    ("PLUS", r"reflect on all you have learned:"),
+    ("SUM", r"reflect on all you have learned:"),
     ("MINUS", r"recall the distance between"),
     ("MUL", r"envision .* by .*"),
     ("DIV", r"divide .* among .*"),
