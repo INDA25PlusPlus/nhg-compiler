@@ -6,6 +6,9 @@ Inspired by languages like [Chef](https://www.dangermouse.net/esoteric/chef.html
 
 Source is mostly flowing text (narration) plus explicit control lines starting with `>`.
 
+## Credits
+* shoutout to https://www.rickyspears.com/technology/building-your-own-programming-language-from-scratch-a-deep-dive/ for the example of lex/parse in python
+
 ## Fibonacci Example
 ```
 The adventure begins.
